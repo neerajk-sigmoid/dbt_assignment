@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: country_mapping
+    database: DBT_DB
+    schema: STG
+    tables:
+      - name: country_codes
+
+  - name: item_details
+    database: DBT_DB
+    schema: STG
+    tables:
+      - name: item_prices_stg

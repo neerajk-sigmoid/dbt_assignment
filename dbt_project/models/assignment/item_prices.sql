@@ -10,14 +10,7 @@ with fetch_data_with_country as (
 
 )
 
-
-
-
 select Version, Country_key as country_code , Country,Item_key,Item_name,year,month,price,user
 from fetch_data_with_country
--- {% if is_incremental() %}
---   -- this filter will only be applied on an incremental run
---   where event_time > (select max(event_time) from {{ this }})
 
--- {% endif %}
 
